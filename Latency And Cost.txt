@@ -1,0 +1,9 @@
+Latency per Image
+
+Approximately 25 ms per image on a Windows laptop (CPU).
+Approximately 1.2 ms inference per image on an NVIDIA Tesla T4 GPU (Google Colab).
+
+Cost per Image
+
+On-device: Approximately $0 per image, since the model runs locally without requiring a cloud server.
+Cloud (estimated): Approximately $0.007 per 1,000 images (around $7 per million images) assuming a GPU server processing ~72,000 images per hour.
