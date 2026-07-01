@@ -1,0 +1,30 @@
+Implemented Models:-
+
+1)Custom CNN
+
+First, I built a custom CNN using convolution, max-pooling, batch normalization, dropout, and dense layers.
+The model learned the training images well but did not perform as well on new images because the dataset was small hence overfitting.
+I also replaced the Flatten layer with Global Average Pooling to reduce the number of parameters and improve generalization but results were same.
+
+2)EfficientNetB0
+
+Next, I tried EfficientNetB0 using transfer learning.
+Since it is a pretrained model, I expected better results, but it achieved only moderate accuracy on my dataset.
+The small dataset and the subtle difference between real photos and photos of screens affected its performance.
+
+3)YOLOv8n Classification
+
+Finally, I used YOLOv8 Nano Classification (YOLOv8n-cls) with pretrained weights.
+I trained it on my custom dataset after splitting it into training, validation, and test sets.
+This model gave the best results with 100% validation accuracy and 92% test accuracy.
+I tried data augmentation but it comes out be even worse.
+I tried complex models like YOLOv8n-cls but it turns out to be more complex and overfits.
+
+=>Final Conclusion
+
+Since the dataset was created by me it has only 57 images, we reached the accuracy of 100% on training and validation set but since the images were not enough only 1 image got misclassified in the test data which caused 92% accuracy.
+
+Model		Result
+Custom CNN	Overfitted, poor generalization
+EfficientNetB0	Low accuracy (50–60%)
+YOLOv8n-cls	Best performance (92% test accuracy-Only 1 image got misclassified)
